@@ -46,7 +46,7 @@ public class mainGUI extends JFrame {
                     mediaPlayer.stop();
                 }
             }
-            
+
         });
         add(button);
 
