@@ -42,7 +42,6 @@ public class mainGUI extends JFrame {
         susPercentage = new JLabel(" x% ");
         susPercentage.setFont(new Font("Serif", Font.PLAIN, 40));
         add(susPercentage);
-
     }
     public static void main(String[] args){
         mainGUI gui = new mainGUI();
