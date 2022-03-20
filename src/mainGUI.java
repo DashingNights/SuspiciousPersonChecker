@@ -52,3 +52,4 @@ public class mainGUI extends JFrame {
         gui.setResizable(false);
     }
 }
+
