@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="windowApp:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/windowApp_jar</output-path>
-    <root id="archive" name="windowApp.jar">
-      <element id="module-output" name="windowApp" />
-    </root>
-  </artifact>
-</component>

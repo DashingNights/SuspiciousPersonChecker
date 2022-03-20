@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SuspiciousPersonChecker:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SuspiciousPersonChecker_jar</output-path>
+    <root id="archive" name="SuspiciousPersonChecker.jar">
+      <element id="module-output" name="SuspiciousPersonChecker" />
+    </root>
+  </artifact>
+</component>
