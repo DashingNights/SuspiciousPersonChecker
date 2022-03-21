@@ -1,7 +1,11 @@
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+
 public class mainGUI extends JFrame {
 
     private JLabel label;
@@ -9,9 +13,9 @@ public class mainGUI extends JFrame {
     private JLabel susPercentage;
     private JButton button;
 
-    public mainGUI(){
-        setLayout(new FlowLayout());
 
+    public mainGUI() {
+        setLayout(new FlowLayout());
 
         label = new JLabel("Who is sus? ");
         label.setFont(new Font("Serif", Font.PLAIN, 13));
@@ -30,6 +34,7 @@ public class mainGUI extends JFrame {
                 susPercentage.setText(percentage + "% sus");
                 if(percentage > 50 || percentage == 50) {
                     label.setText(name + " is sussy");
+
                 } else {
                     label.setText(name + " is not sus");
                 }
@@ -40,14 +45,15 @@ public class mainGUI extends JFrame {
         susPercentage.setFont(new Font("Serif", Font.PLAIN, 40));
         add(susPercentage);
 
-        ImageIcon icon = new ImageIcon("src/among-us-twerk.gif");
+        ImageIcon icon = new ImageIcon(getClass().getResource("among-us-twerk.gif"));
         JLabel picLabel = new JLabel(icon);
         add(picLabel);
 
 
     }
-    public static void main(String[] args){
+    public static void main(String[] args) {
         mainGUI gui = new mainGUI();
+        mainGUI player = new mainGUI();
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gui.setSize(255, 350);
         gui.setVisible(true);
