@@ -34,7 +34,16 @@ public class mainGUI extends JFrame {
                 susPercentage.setText(percentage + "% sus");
                 if(percentage > 50 || percentage == 50) {
                     label.setText(name + " is sussy");
-
+                    String soundName = "sus_sound.wav";
+                    AudioInputStream audioInputStream = null;
+                    try {
+                        audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+                        Clip clip = AudioSystem.getClip();
+                        clip.open(audioInputStream);
+                        clip.start();
+                    } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
+                        ex.printStackTrace();
+                    }
                 } else {
                     label.setText(name + " is not sus");
                 }
@@ -55,7 +64,7 @@ public class mainGUI extends JFrame {
         mainGUI gui = new mainGUI();
         mainGUI player = new mainGUI();
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gui.setSize(255, 350);
+        gui.setSize(1000, 1000);
         gui.setVisible(true);
         gui.setTitle("S.P.I.");
         gui.setResizable(false);
