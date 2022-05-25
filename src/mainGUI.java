@@ -21,7 +21,7 @@ public class mainGUI extends JFrame {
         label.setFont(new Font("Serif", Font.PLAIN, 13));
         add(label);
 
-        textField = new JTextField(" sus person name here ",15);
+        textField = new JTextField("   ",15);
         textField.setFont(new Font("Serif", Font.PLAIN, 20));
         add(textField);
 
@@ -44,7 +44,8 @@ public class mainGUI extends JFrame {
                     } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
                         ex.printStackTrace();
                     }
-                } else {
+                }
+                else {
                     label.setText(name + " is not sus");
                 }
             }
@@ -64,9 +65,9 @@ public class mainGUI extends JFrame {
         mainGUI gui = new mainGUI();
         mainGUI player = new mainGUI();
         gui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        gui.setSize(1000, 1000);
+        gui.setSize(275, 375);
         gui.setVisible(true);
-        gui.setTitle("S.P.I.");
+        gui.setTitle("SPC");
         gui.setResizable(false);
     }
 }
